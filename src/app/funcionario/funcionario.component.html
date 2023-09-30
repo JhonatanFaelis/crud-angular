@@ -1,0 +1,90 @@
+<div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col-6">Funcionario</div>
+        <div class="col-6 text-end">
+            <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Adicionar
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Funcionario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center g-2">
+            <div class="col-md-4 col-12">
+                <label for="">Nome</label>
+                <input type="text" class="form-control form-control-sm" placeholder="João">
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Sobre Nome</label>
+                <input type="text" class="form-control form-control-sm" placeholder="Silva">  
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Função</label>
+                <select name="" id="" class="form-select form-select-sm" required>
+                    <option value=""></option>
+                    <option value="">Desenvolvedor Front-End</option>
+                    <option value="">Desenvolvedor Back-End</option>
+                    <option value="">Design</option>
+                    <option value="">FullStack</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Gerente</label>
+                <select name="" id="" class="form-select form-select-sm" required>
+                    <option value=""></option>
+                    <option value="">Jhonatan</option>
+                    <option value="">Samira</option>
+                    <option value="">Gabrielle</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Tipo Contrato</label>
+                <select name="" id="" class="form-select form-select-sm" required>
+                    <option value=""></option>
+                    <option value="">Efetivo</option>
+                    <option value="">Estágio</option>
+                    <option value="">Freelancer</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Data Cadastro</label>
+                <input type="date" class="form-control form-control-sm">
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Email</label>
+                <input type="email" class="form-control form-control-sm" placeholder="email@email.com.br">
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Telefone</label>
+                <input type="text" class="form-control form-control-sm" placeholder="(19) 99999-9999">
+            </div>
+            <div class="col-md-4 col-12">
+                <label for="">Salário</label>
+                <input type="text" class="form-control form-control-sm" placeholder="R$ 4.000,00">
+            </div>
+          </div>
+         
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
