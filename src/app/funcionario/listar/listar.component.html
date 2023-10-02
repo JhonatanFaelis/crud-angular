@@ -1,19 +1,41 @@
-<table class="table">
+<table class="table table-responsive">
     <thead>
       <tr>
         <th scope="col">Código</th>
         <th scope="col">Nome</th>
         <th scope="col">Sobre nome</th>
-        <th scope="col">Função</th>
+        <th scope="col" class="d-none d-md-table-cell">Função</th>
+        <th scope="col">Gerente</th>
+        <th scope="col">Salário</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
         <!-- aqui vai ng for -->
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+      <tr *ngFor="let f of funcionario">
+        <td>{{f.id}}</td>
+        <td>{{f.nome}}</td>
+        <td>{{f.sobreNome}}</td>
+        <td class="d-none d-md-table-cell">{{f.funcao}}</td>
+        <td>{{f.gerente}}</td>
+        <td>{{f.salario}}</td>
+        <td class="text-end d-flex justify-content-end">
+          <button class="btn btn-sm btn-warning me-1" (click)="detalhe(f.id)" data-bs-toggle="modal" data-bs-target="#alterarModal">
+            <span class="bi bi-pencil-square"></span>
+          </button>
+          <button class="btn btn-sm btn-danger" (click)="deletarFuncionario(f.id, f.nome)">
+            <span class="bi bi-trash3"></span>
+          </button>
+        </td>
+        
       </tr>
     </tbody>
+    
   </table>
+
+
+  
+  <router-outlet></router-outlet>
+ 
+
+  
