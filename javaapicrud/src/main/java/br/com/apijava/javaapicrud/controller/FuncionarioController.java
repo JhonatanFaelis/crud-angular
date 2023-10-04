@@ -16,11 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.apijava.javaapicrud.DAO.IFuncionario;
 import br.com.apijava.javaapicrud.model.Funcionario;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/funcionario")
-@EnableSwagger2
+@ApiResponse
 public class FuncionarioController {
 
     @Autowired
